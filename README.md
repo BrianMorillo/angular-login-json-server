@@ -3,7 +3,7 @@
 
 Angular Login using JSON-Server(jsonwebtoken), Angular AuthGuard, Validators, Bootstrap
 
-![Screenshot](https://github.com/BrianMorillo/angular-login-json-server/image/screenshot.png?raw=true)
+![Screenshot](https://github.com/BrianMorillo/angular-login-json-server/blob/master/image/screenshot.png?raw=true)
 
 ## Clone the project
 
