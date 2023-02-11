@@ -1,0 +1,30 @@
+<form [formGroup]="loginForm" (ngSubmit)="handleLogin()" class="rounded login-form">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1"
+      aria-describedby="emailHelp">
+    <span class="text-danger" *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required', 'email')">
+      *Email is required. </span>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+    <span class="text-danger"
+      *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required', 'password')">*Password is required.
+    </span>
+  </div>
+  <div class="d-grid gap-2">
+    <button type="submit" [disabled]="!loginForm.valid" class="btn btn-primary ">Login</button>
+  </div>
+</form>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="errorToast" class="toast align-items-center text-bg-danger border-0" role="alert" aria-live="assertive"
+    aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        {{errorMessage}}
+      </div>
+    </div>
+  </div>
+</div>
